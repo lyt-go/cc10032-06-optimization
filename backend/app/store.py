@@ -133,6 +133,8 @@ class Store:
         self._lineage_graph: dict[str, list[dict[str, Any]]] = {}
         # 归档清单（cold_archive → retention 共享）
         self._archive_manifest: list[dict[str, Any]] = []
+        # 压缩盘点/候选清单（compaction 多版本盘点共享）
+        self._compaction_manifest: dict[str, dict[str, Any]] = {}
 
     # ---------- 基础 CRUD ----------
     def module_names(self) -> list[str]:

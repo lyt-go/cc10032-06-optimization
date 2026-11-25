@@ -29,3 +29,5 @@ class EntryPayload(BaseModel):
 class ActionPayload(BaseModel):
     action: str
     remark: str | None = None
+    task_id: str | None = None
+    owner: str | None = None
